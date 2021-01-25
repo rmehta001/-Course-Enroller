@@ -1,9 +1,24 @@
 # -Course-Enroller
+I created a JDBC application for managing the course enrollment at a university. 
+The schema is as follows:
+Students(sid:integer, sname:string)
+Courses(cid:integer, cname:string, credits:integer)
+Enrolled(sid:integer, cid:integer)
 
-Application starts by requesting student’s  ID;
+The Students relation  stores  data  about  students: a  unique student  id  and  name.  
+Each  course  has  a  course id, name and number of credits). 
+The Enrolled relation stores what courses are taken by which students.
+I create the above schema definition in a file called schema.sql. 
+
+Also, I created a Java JDBC-based  application  run  by  students,  with  name  Student.java.  
+The  application has a command-line  interface  menu  that  allows  the  user  to  select  one  option  as  below.  
+Once  that  menu  function  is  completed,  the  program  must  return  to  the  main  menu.  
+I used the DBS2 Oracle instance as DBMS.
+
+The Application starts by requesting student’s  ID;
 no authentication is necessary, and the remaining session assumes  that  student  ID  is  active.  If  (-1)  is  introduced,  a  new  student  is  created,  and  the  user  is  prompted for all necessary information. 
 
-A database called schema.sql is maintained throughout!
+Student-Menu:
 
 The main menu is the following:
 L – List: lists all records in the course table
